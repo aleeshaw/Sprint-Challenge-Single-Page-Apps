@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
+import CharacterCard from "./CharacterCard";
 
 
 export default function CharacterList() {
   ///// TODO: Add useState to track data from useEffect
   const [characters, setCharacters] = useState([]);
   useEffect(() => {
-    // TODO: Add API Request here - must run in `useEffect`
+    ///// TODO: Add API Request here - must run in `useEffect`
     const getCharacters = () => {
       Axios
         .get("https://rickandmortyapi.com/api/character/")
         .then(response => {
           console.log(response.data.response);
+          let charList = response.data.response;
+          setCharacters(charList);
         })
         .catch(error => {
           console.log("Error Message: ", error);
@@ -21,8 +24,11 @@ export default function CharacterList() {
   }, []);
 
   return (
-    <section className="character-list">
-      <h2>TODO: `array.map()` over your state here!</h2>
-    </section>
+    <CardGroup  
+      width="100%"
+      className="grid-view"
+    >
+      <CharacterCard className="grid-view" characters={characters} />
+    </CardGroup>
   );
-}
+};
