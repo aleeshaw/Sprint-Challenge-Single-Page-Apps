@@ -4,20 +4,28 @@ import axios from "axios";
 export default function SearchForm() {
  
   const [searchQ, setSearchQ] = useState("");
-
+  const [resultList, setResultList] = useState("");
   const handleChange = e => {
     setSearchQ(e.target.value)
   }
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log("Search Term Submitted!!");
-    console.log(searchQ);
-
+    
     axios
       .get(`https://rickandmortyapi.com/api/character/?name=${searchQ}`)
       .then(response => {
-        console.log(response.data.results);
+        setResultList(response.data.results);
+        console.log("results: ", resultList);
+        console.log(resultList[0].name);
+        console.log(resultList.forEach(function(thingy) {
+          console.log(thingy.name);
+        }));
+        const listNames = resultList.forEach(function(item) {
+          return item.name;
+        });
+        console.log(listNames);
+        
       })
       .catch(error => {
         console.log("Error Message: ", error);
@@ -25,6 +33,7 @@ export default function SearchForm() {
   };
 
   return (
+    <>
     <form onSubmit={e => handleSubmit(e)}>
       <input
         name="searchBar"
@@ -38,5 +47,12 @@ export default function SearchForm() {
         value="Enter"
       />
     </form>
+
+    <section className="results-list">
+      <div>
+        Results: {}
+      </div>
+    </section>
+    </>
   );
 };

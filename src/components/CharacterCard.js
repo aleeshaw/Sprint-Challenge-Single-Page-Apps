@@ -31,18 +31,6 @@ const CharacterCard = ({characters}) => {
         </CardBody>
       </Card>
       </div>
-      
-
-      // <div className="character-card">
-      //   <img src={image} alt={name}/>
-      //   <Link key={character.id} to={`/characters/${character.id}`}>
-      //     <h2>{name}</h2>
-      //   </Link>
-      //   <p>Species: {species}</p>
-      //   <p>Gender: {gender}</p>
-      //   <p>Status: {status}</p>
-      //   <p>Origin: {origin.name}</p>
-      // </div>
     )
   }
   return (
