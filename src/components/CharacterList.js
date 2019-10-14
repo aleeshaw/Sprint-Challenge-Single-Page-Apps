@@ -32,7 +32,7 @@ export default function CharacterList() {
       width="100%" 
       className="grid-view"
     >
-        <CharacterCard className="grid-view" characters={characters} />
+      <CharacterCard className="grid-view" characters={characters} />
     </CardGroup>
     
   );

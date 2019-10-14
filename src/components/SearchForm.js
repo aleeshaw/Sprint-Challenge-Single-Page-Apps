@@ -34,6 +34,7 @@ export default function SearchForm() {
 
   return (
     <>
+    <h2 className="search-page-title">Search for your favorite character...</h2>
     <form onSubmit={e => handleSubmit(e)}>
       <input
         name="searchBar"
