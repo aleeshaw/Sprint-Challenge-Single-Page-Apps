@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
+import { Route } from "react-router-dom";
 import CharacterCard from "./CharacterCard.js";
 import {CardGroup} from "reactstrap";
 
@@ -28,11 +29,13 @@ export default function CharacterList() {
 
 
   return (
+  
     <CardGroup 
       width="100%" 
       className="grid-view"
     >
         <CharacterCard className="grid-view" characters={characters} />
     </CardGroup>
+    
   );
 }
