@@ -27,13 +27,74 @@ main {
 .grid-view div.card.ui {
   margin: 1.25rem;
 }
-/*
+
 .main-img {
   display: block;
   border-radius: 100%;
   margin: 0 auto;
-} */
+}
 
 header h1 {
   text-align: center;
+}
+
+.nav-head {
+  font-size: 1.5rem;
+}
+
+.nav-bar {
+  margin-bottom: 25px;
+}
+
+.card {
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 5px;  
+}
+
+.more-char-info {
+  display: flex;
+  width: 700px;
+  margin: 0 auto;
+}
+
+.more-img {
+  width: 200%;
+}
+
+.card-title {
+  font-size: 1.75rem;
+}
+
+.more-sub {
+  margin-bottom: 10px;
+}
+
+.more-sub strong {
+  color: darkred;
+}
+
+.char-nav-btns {
+  display:flex;
+  justify-content: space-evenly;
+  margin-top: 15px;
+}
+
+.char-nav-btns Button {
+  background-color: #50EBA1;
+  border-color: transparent;
+}
+
+.color-btn {
+  background-color: #50EBA1;
+  border-color: transparent;
+  margin-top: 10px;
+}
+
+.welcome-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
