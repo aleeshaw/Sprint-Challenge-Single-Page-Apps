@@ -15,7 +15,7 @@ export default function WelcomePage() {
       </header>
       <Link to="/characters">
         <Button className="color-btn">
-          Get Shwifty!!
+          Get Schwifty!!
         </Button>
       </Link>
     </section>
