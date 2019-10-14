@@ -20,6 +20,7 @@ export default function SearchForm() {
     };
     getList(); 
     }, []);
+    //TODO ...add another component for rendering the search results??
 
   
   const handleChange = e => {
