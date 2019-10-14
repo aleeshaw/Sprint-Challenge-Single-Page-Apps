@@ -11,10 +11,12 @@ export default function App() {
   return (
     <main>
       <Navigation /> 
+
+      {/*App routes*/}
       <Route exact path="/" component={WelcomePage} />
       <Route exact path="/characters" component={CharacterList}/>
       <Route path="/characters/:id" component={Character} /> 
-      <Route path="/search" component={SearchForm}/> {/*Put this in the CharacterList Page too*/}
+      <Route path="/search" component={SearchForm}/> 
     </main>
   );
 }
